@@ -11,6 +11,7 @@ public class TownTest {
     @BeforeEach
     void setUp(){
         town = new Town("Reading");
+        building = new Building("Main st",2,20);
     }
 
     @Test
