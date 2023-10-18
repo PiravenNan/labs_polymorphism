@@ -11,7 +11,7 @@ public class TownTest {
     @BeforeEach
     void setUp(){
         town = new Town("Reading");
-        building = new Residential("Main st",2,20,true,2000);
+        building = new Residential("Main st",2,20,false,2000);
     }
 
     @Test
@@ -23,6 +23,15 @@ public class TownTest {
     void canAddBuilding(){
         town.addBuildings(building);
         assertThat(town.numberOfBuildings()).isEqualTo(1);
+    }
+
+    @Test
+    void canDoCensus(){
+        Residential building2;
+        building2 = new Residential("Unimportant st",2,8000,true,1);
+        town.addToCensus(building);
+        town.addToCensus(building2);
+        assertThat(town.getTownPopulation()).isEqualTo(2001);
     }
 }
 

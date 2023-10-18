@@ -1,4 +1,6 @@
-public class Residential extends Building {
+import Interface.Population;
+
+public class Residential extends Building implements Population {
 
     private boolean multiFamily;
     private int residents;
@@ -14,6 +16,11 @@ public class Residential extends Building {
     }
 
     public int getResidents(){
+        return this.residents;
+    }
+
+    @Override
+    public int population() {
         return this.residents;
     }
 
