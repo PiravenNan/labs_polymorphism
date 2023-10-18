@@ -6,12 +6,12 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class TownTest {
     Town town;
-    Building building;
+    Residential building;
 
     @BeforeEach
     void setUp(){
         town = new Town("Reading");
-        building = new Building("Main st",2,20);
+        building = new Residential("Main st",2,20,true,2000);
     }
 
     @Test

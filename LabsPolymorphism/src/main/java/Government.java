@@ -15,4 +15,12 @@ public class Government extends Building{
     public void changeFunding(int amount){
         this.funding+=amount;
     }
+
+    public String info(){
+        return "Government department : " + this.department;
+    }
+
+    public String info(String note){
+        return "User added note - " + note;
+    }
 }

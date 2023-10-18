@@ -27,4 +27,14 @@ public class ResidentialTest {
         residential.addResidents(20);
         assertThat(residential.getResidents()).isEqualTo(60);
     }
+
+    @Test
+    void canGetInfo(){
+        assertThat(residential.info()).isEqualTo("Number of residents : 40");
+    }
+
+    @Test
+    void canGetInfo__WithString(){
+        assertThat(residential.info("No pets allowed")).isEqualTo("User added note - No pets allowed");
+    }
 }

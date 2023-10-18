@@ -12,7 +12,7 @@ public class GovernmentTest {
     @BeforeEach
     void setup() {
         town = new Town("Reading");
-        government = new Government("Main st", 2, 30, "Fire", 20_000);
+        government = new Government("Main st", 2, 30, "Hospital", 20_000);
         town.addBuildings(government);
     }
 
@@ -25,5 +25,15 @@ public class GovernmentTest {
     void canAddFunding(){
         government.changeFunding(-10_000);
         assertThat(government.getFunding()).isEqualTo(10_000);
+    }
+
+    @Test
+    void canGetInfo(){
+        assertThat(government.info()).isEqualTo("Government department : Hospital");
+    }
+
+    @Test
+    void canGetInfo__WithString(){
+        assertThat(government.info("Needs more funding!")).isEqualTo("User added note - Needs more funding!");
     }
 }

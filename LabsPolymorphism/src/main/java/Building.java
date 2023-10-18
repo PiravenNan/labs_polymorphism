@@ -1,4 +1,4 @@
-public class Building {
+public abstract class Building {
 
     protected String address;
     int stories;
@@ -9,4 +9,6 @@ public class Building {
         this.age = age;
         this.address = address;
     }
+
+    public abstract String info();
 }

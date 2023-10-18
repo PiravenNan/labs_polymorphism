@@ -17,4 +17,11 @@ public class Residential extends Building {
         return this.residents;
     }
 
+    public String info(){
+        return "Number of residents : " + this.residents;
+    }
+
+    public String info(String note){
+        return "User added note - " + note;
+    }
 }
